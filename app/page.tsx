@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { useEffect, useState } from "react"
 
 
@@ -23,7 +24,9 @@ export default  function Home() {
   return (    
       <div>
         {images && images.map((image:any) => 
-          <img src={`/image/${image}`} alt="" key={image} />
+
+        <Image src={`/image/${image}`} alt="" key={image} />
+
         )}
       </div>
   )

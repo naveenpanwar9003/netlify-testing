@@ -6,7 +6,7 @@ import path from 'path';
 export const getImages = async () => {
 
     const publicDirPath = path.join(process.cwd(), 'public', 'image'); // Adjust the 'images' folder as per your structure
-    const images = [];
+    const images: any = [];
 
     try {
         const files = await fs.promises.readdir(publicDirPath);

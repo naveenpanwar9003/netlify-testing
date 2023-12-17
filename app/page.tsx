@@ -20,7 +20,7 @@ export default function Home() {
     }, [])
   return (    
       <div>
-        {images && images.map(image => 
+        {images && images.map((image:any) => 
           <img src={`/image/${image}`} alt="" key={image} />
         )}
       </div>

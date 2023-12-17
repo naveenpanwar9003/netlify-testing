@@ -1,9 +1,7 @@
-"use server"
-
+import path from "path";
 import fs from 'fs'
-import path from 'path';
 
-export const getImages = async () => {
+export async function GET() {
 
     console.log("this is Api endpoint")
 
@@ -20,9 +18,11 @@ export const getImages = async () => {
             }
         });
 
-        return images;
+        return Response.json({ data: images })
+
     } catch (error) {
         console.error('Error reading public directory:', error);
         return [];
     }
+
 }

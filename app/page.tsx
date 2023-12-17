@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import { getImages } from "./actions/getImages"
+
 
 
 export default  function Home() {
@@ -11,9 +11,11 @@ export default  function Home() {
    useEffect(() => {
 
     (async function(){
-       const images = await getImages();
-       setimages(images)
-       console.log(images)
+        const res = await fetch(`${process.env.NODE_ENV == "development" ? "http://localhost:3000/" : "https://shiny-gingersnap-fc6e5d.netlify.app/"}/api/images`);
+        const {data} = await res.json();
+
+        setimages(data)
+
     })()
     
      

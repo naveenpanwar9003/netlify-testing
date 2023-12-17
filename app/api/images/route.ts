@@ -14,7 +14,7 @@ export async function GET() {
         files.forEach(file => {
             // Check if the file is an image (you can modify this check based on your image extensions)
             if (file.endsWith('.jpg') || file.endsWith('.png') || file.endsWith('.jpeg')) {
-                images.push(`${file}`);
+                images.push(`/image/${file}`);
             }
         });
 

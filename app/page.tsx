@@ -25,7 +25,7 @@ export default  function Home() {
       <div>
         {images && images.map((image:any) => 
 
-        <Image src={`/image/${image}`} alt="" key={image} />
+        <Image src={`/image/${image}`} alt="" key={image} width={400} height={200}/>
 
         )}
       </div>

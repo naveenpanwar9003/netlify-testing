@@ -22,7 +22,7 @@ export async function GET() {
 
     } catch (error) {
         console.error('Error reading public directory:', error);
-        return [];
+        return Response.json({}, { status: 400 })
     }
 
 }

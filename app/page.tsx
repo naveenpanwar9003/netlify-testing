@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { getImages } from "./actions/getImages"
 
 
-export default function Home() {
+export default  function Home() {
 
   const [images, setimages] = useState<any>()
 

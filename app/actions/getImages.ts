@@ -5,6 +5,8 @@ import path from 'path';
 
 export const getImages = async () => {
 
+    console.log("this is server action")
+
     const publicDirPath = path.join(process.cwd(), 'public', 'image'); // Adjust the 'images' folder as per your structure
     const images: any = [];
 
